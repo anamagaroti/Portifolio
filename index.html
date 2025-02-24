@@ -1,4 +1,345 @@
 <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Ana Júlia Magaroti</title>
+    <style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: #333;
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.content {
+    padding: 2em 5em;
+    background-color: #f8f8f8;
+}
+
+footer {
+    background: #333;
+    color: white;
+    padding: 1em;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilo para os certificados */
+.certificados iframe {
+    width: 100%;
+    height: 500px;
+    margin-bottom: 20px;
+}
+
+/* Links de contato */
+.links a {
+    display: block;
+    margin: 10px 0;
+    color: #333;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+/* Seção de Projetos */
+#projetos {
+    padding: 50px 10%;
+    
+}
+
+#projetos h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.bloc-projeto {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.bloc-projeto-texto {
+    flex: 1;
+    padding: 20px;
+}
+
+.bloc-projeto-texto h2 {
+    font-size: 1.8rem;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.bloc-projeto-texto h4 {
+    font-size: 1.2rem;
+    color: #666;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.bloc-projeto-texto p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+.bloc-projeto img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+
+/* Seção Sobre */
+#sobre {
+    width: 80%;
+    margin: auto;
+    padding: 50px 0;
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#sobre p {
+    flex: 1;
+    color: #666;
+    line-height: 1.6;
+    padding-right: 20px;
+}
+
+#sobre img {
+    width: 200px;
+    border-radius: 50%;
+}
+
+/* Seção de Contato */
+#contato {
+    padding: 50px 10%;
+    background: #f8f8f8;
+    text-align: center;
+}
+
+#contato h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+#contato {
+    padding: 50px 10%;
+    background: #f8f8f8;
+    text-align: center;
+}
+
+#contato h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.link {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+    display: inline-block;
+    min-width: 150px;
+    text-align: center;
+}
+
+/* Cores personalizadas para cada link */
+.linkedin {
+    background: #0077b5;
+}
+
+.instagram {
+    background: #e4405f;
+}
+
+.github {
+    background: #6d706d;
+}
+
+.email {
+    background: #f39c12;
+}
+
+/* Efeito hover */
+.link:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .link {
+        width: 80%;
+    }
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .bloc-projeto {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .bloc-projeto img {
+        width: 100%;
+        max-width: 400px;
+        margin: 20px auto 0;
+    }
+
+    #sobre {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #sobre p {
+        padding-right: 0;
+    }
+
+    #sobre img {
+        margin-top: 20px;
+    }
+}
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ana Júlia Magaroti</h1>
+        <br>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="certificados.html" target="_blank">Certificados</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="content">
+        <section id="sobre">
+
+            <p>Sou Ana Júlia Magaroti, desenvolvedora de sistemas com 19 anos. Concluí o ensino médio e o curso técnico em Desenvolvimento de Sistemas na Etec Dr. José Luiz Viana Coutinho e, atualmente, estou no 3º semestre de Sistemas para Internet na Fatec José Camargo.
+
+                Tenho experiência em desenvolvimento web com HTML5, CSS3, e programação nas linguagens C#, Dart e GoLang. Também tenho familiaridade com bancos de dados relacionais e frameworks como React e Flutter.
+                
+                Trabalhei como desenvolvedora na Agilize Proteção Veicular, onde desenvolvi uma landing page e criei uma API para o sistema da empresa. Hoje, atuo como desenvolvedora full-stack na Teraquiz, focando no desenvolvimento de novas funcionalidades e utilizando GoLang e Flutter para soluções mobile, web e desktop.
+                
+                Além disso, já atuei como analista de suporte, aprimorando minhas habilidades de comunicação e resolução de problemas.</p>
+            <img src="foto.jpg" alt="">
+        </section>
+        <section id="projetos">
+            <h2>Meus Projetos</h2>
+            <div class="bloc-projeto">
+                <div class="bloc-projeto-texto">
+                    <h2>Forasteiro</h2>
+                    <p>O site Forasteiro é um e-commerce especializado na venda de facas, amoladores e acessórios para churrasco. O design da plataforma segue um estilo rústico e robusto, remetendo ao universo do churrasco e cutelaria.</p>    
+                </div>
+                <img src="img/projeto1.jpg" alt="">
+            </div>
+            <div class="bloc-projeto">
+                <div class="bloc-projeto-texto">
+                    <h2>PGP</h2>
+                    <h4>Descrição</h4>
+                    <p>Este projeto é uma implementação de criptografia e descriptografia baseada no protocolo PGP (Pretty Good Privacy), utilizando Golang. O objetivo principal é garantir a segurança das comunicações através de criptografia assimétrica, permitindo que mensagens sejam protegidas contra interceptações e acessadas apenas pelos destinatários autorizados.</p>    
+                    <h4>Tecnologias utilizadas</h4>
+                    <p>Linguagem: Golang
+                        <br>Biblioteca: golang.org/x/crypto/openpgp (ou outra que tenha utilizado)
+                        <br>Chaves Assimétricas: Geração e gerenciamento de chaves públicas e privadas
+                        <br>Hashing e Assinatura Digital: Para garantir a integridade das mensagens
+                        <br> CLI (Command Line Interface): Interface para facilitar a interação com o sistema</p>
+                    <h4>Funcionalidades</h4>
+                    <p>Geração de Chaves PGP: O sistema permite a criação de um par de chaves (pública e privada) para cada usuário.
+                      <br>  ✅ Criptografia de Mensagens: Mensagens são cifradas usando a chave pública do destinatário, garantindo que apenas ele possa ler.
+                      <br> ✅ Descriptografia de Mensagens: O destinatário pode descriptografar a mensagem usando sua chave privada.
+                      <br> ✅ Assinatura Digital: Possibilidade de assinar mensagens digitalmente para garantir autenticidade e integridade.
+                      <br> ✅ Validação da Assinatura: Verificação de que a mensagem recebida foi realmente enviada pelo remetente.</p>
+                    <h4>Arquitetura do projeto</h4>
+                    <p>keygen.go → Geração de chaves PGP
+                        <br>encrypt.go → Função para criptografar mensagens usando a chave pública
+                        <br>decrypt.go → Função para descriptografar mensagens com a chave privada
+                        <br>sign.go → Assinatura digital de mensagens
+                        <br>verify.go → Verificação da assinatura digital</p>
+                </div>
+
+            </div>
+        </section>
+        <section id="contato">
+            <h2>Contato</h2>
+            <div class="links">
+                <a href="https://www.linkedin.com/in/ana-j%C3%BAlia-magaroti-5257791b9/" target="_blank" class="link linkedin">LinkedIn</a>
+                <a href="https://www.instagram.com/ana.magaroti/" target="_blank" class="link instagram">Instagram</a>
+                <a href="https://github.com/anamagaroti" target="_blank" class="link github">GitHub</a>
+                <a href="mailto:anamagaroti.info@gmail.com" class="link email">Email</a>
+            </div>
+        </section>
+        
+    </div>
+    <footer>
+        <p>&copy; 2025 Ana Júlia Magaroti. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
+
+
+
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -21,4 +362,4 @@
         </div>
     </div>
 </body>
-</html>
+</html> -->
